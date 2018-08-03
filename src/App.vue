@@ -1,7 +1,9 @@
 <template>
-<div id="app" class='container'>
+<div id='app' class='container'>
     <ingredients :ingredients="ingredients"></ingredients>
     <recipes :recipes="recipes" :ingredients="ingredients"></recipes>
+
+    <!-- <ul><li v-for="ingredient in ingredients" v-if="ingredient.amt>0">{{ingredient.name}}</li></ul> -->
 </div>
 </template>
 
@@ -13,9 +15,14 @@ import Recipes from './components/Recipes.vue'
 var recipes = require('./assets/food.json');
 // parse recipe list to create ingredient list
 var ingredients = [];
+// for each recipe
 recipes.forEach(function(recipe) {
+  // go through each ingredient
   recipe.ingredients.forEach(function(ingredient) {
-    if (!ingredients.includes(ingredient)) {  // FIXME!!!
+    // check that ingredient isn't already in the list (use name as key)
+    var names = ingredients.map(i => i.name);
+    if (!names.includes(ingredient.name)) {
+      // if not, add it (w amount 0)
       ingredients.push({"name": ingredient.name, "amt":0});
     }
   });
