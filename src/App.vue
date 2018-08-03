@@ -1,5 +1,5 @@
 <template>
-<div id="app">
+<div id="app" class='container'>
     <ingredients></ingredients>
     <recipes></recipes>
 </div>
@@ -31,7 +31,10 @@ export default {
 body
     margin 0
 // app
-#app
+.container
     background-color pink
     display flex
+
+.col
+    padding 10px
 </style>

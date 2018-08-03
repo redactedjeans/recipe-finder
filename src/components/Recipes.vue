@@ -1,6 +1,5 @@
 <template>
-<div id='recipes' class='col'>
-    recipes
+<div id='recipes' class='col col-r'>
 </div>
 </template>
 
@@ -11,7 +10,7 @@ export default {
 </script>
 
 <style lang="stylus">
-#recipes
+.col-r
     background-color lightblue
     flex 1
 </style>
