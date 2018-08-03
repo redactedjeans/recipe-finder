@@ -2,12 +2,12 @@
 <div id='ingredients' class='col col-l'>
   <input value="search" class='search'> <!-- FIXME/TODO (search/filter/autocomplete?) -->
 
-  <ul class='ingr-list'>
-    <li v-for="i in ingredients">
-      <button v-on:click="add(i, -1)" class='btn btn-min'>-</button
-      <span class='ingr'>{{ i.name }}</span>
-      <span class='counter'>{{ i.amt }}</span>
-      <button v-on:click="add(i)" class='btn btn-pls'>+</button>
+  <ul class='ingredient-list'>
+    <li v-for="ingredient in ingredients" class='ingredient'>
+      <button v-on:click="add(ingredient, -1)" class='btn btn-min'>-</button
+      <span class='ingredient'>{{ ingredient.name }}</span>
+      <span class='counter'>{{ ingredient.amt }}</span>
+      <button v-on:click="add(ingredient)" class='btn btn-pls'>+</button>
       <!-- TODO when clicking +/-, push number of ingr up to App.vue -->
     </li>
   </ul>
@@ -17,13 +17,8 @@
 <script>
 export default {
   name: 'ingredients',
-  props: [
-    'ingredients'
-  ],
-  data() {
-    return {
-      ingredients: this.ingredients
-    }
+  props: {
+    ingredients: Array
   },
   methods: {
     add: function(ingredient, mult=1) {
@@ -44,7 +39,7 @@ export default {
 .search
     width 100%
 
-.ingr-list
+.ingredient-list
     padding 0
     margin 0
     list-style none
