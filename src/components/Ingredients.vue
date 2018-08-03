@@ -1,6 +1,7 @@
 <template>
 <div id='ingredients' class='col col-l'>
   <input placeholder='search' class='search'> <!-- FIXME/TODO (search/filter/autocomplete?) -->
+  <button v-on:click="reset" class='btn'>Reset</button>
 
   <ul class='ingredient-list'>
     <li v-for="(amt, name) in ingredients" class='ingredient'>
@@ -25,6 +26,11 @@ export default {
       if (mult>=0 || this.ingredients[name]>0) {
         this.ingredients[name] += mult;
         //
+      }
+    },
+    reset: function() {
+      for (name in this.ingredients) {
+        this.ingredients[name] = 0;
       }
     }
   }
