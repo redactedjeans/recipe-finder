@@ -1,39 +1,5 @@
 [
     {
-        "name": "Egg",
-        "ingredients": [],
-        "station": "",
-        "category": "",
-        "hunger": 10,
-        "bonus": [],
-        "value": 10,
-        "rarity": "Common",
-        "tier": 1
-    },
-    {
-        "name": "Corn",
-        "ingredients": [],
-        "station": "",
-        "category": "",
-        "hunger": 10,
-        "bonus": [],
-        "value": 10,
-        "rarity": "Common",
-        "tier": 1
-    },
-    {
-        "name": "Banana",
-        "ingredients": [],
-        "station": "",
-        "category": "",
-        "hunger": 10,
-        "bonus": [],
-        "value": 10,
-        "rarity": "Common",
-        "tier": 1
-    },
-
-    {
         "name": "Apex Fritter",
         "ingredients": [
             {"num": 1, "name": "Egg"},
