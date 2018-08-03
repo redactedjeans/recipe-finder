@@ -1,14 +1,13 @@
 <template>
 <div id='ingredients' class='col col-l'>
-  <input value="search" class='search'> <!-- FIXME/TODO (search/filter/autocomplete?) -->
+  <input placeholder='search' class='search'> <!-- FIXME/TODO (search/filter/autocomplete?) -->
 
   <ul class='ingredient-list'>
-    <li v-for="ingredient in ingredients" class='ingredient'>
-      <button v-on:click="add(ingredient, -1)" class='btn btn-min'>-</button
-      <span class='ingredient'>{{ ingredient.name }}</span>
-      <span class='counter'>{{ ingredient.amt }}</span>
-      <button v-on:click="add(ingredient)" class='btn btn-pls'>+</button>
-      <!-- TODO when clicking +/-, push number of ingr up to App.vue -->
+    <li v-for="(amt, name) in ingredients" class='ingredient'>
+      <button v-on:click="add(name, -1)" class='btn btn-min'>-</button
+      <span class='ingredient'>{{ name }}</span>
+      <span class='counter'>{{ amt }}</span>
+      <button v-on:click="add(name)" class='btn btn-pls'>+</button>
     </li>
   </ul>
 </div>
@@ -18,13 +17,14 @@
 export default {
   name: 'ingredients',
   props: {
-    ingredients: Array
+    ingredients: Object
   },
   methods: {
-    add: function(ingredient, mult=1) {
+    add: function(name, mult=1) {
       // 'add' only if going up or if there's room to go down
-      if (mult>=0 || ingredient.amt>0) {
-        ingredient.amt += mult;
+      if (mult>=0 || this.ingredients[name]>0) {
+        this.ingredients[name] += mult;
+        //
       }
     }
   }

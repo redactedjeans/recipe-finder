@@ -14,16 +14,15 @@ import Recipes from './components/Recipes.vue'
 // get all recipes
 var recipes = require('./assets/food.json');
 // parse recipe list to create ingredient list
-var ingredients = [];
+var ingredients = {};
 // for each recipe
 recipes.forEach(function(recipe) {
   // go through each ingredient
   recipe.ingredients.forEach(function(ingredient) {
-    // check that ingredient isn't already in the list (use name as key)
-    var names = ingredients.map(i => i.name);
-    if (!names.includes(ingredient.name)) {
+    // check that ingredient isn't already in the list
+    if (ingredients[ingredient.name] == undefined) {
       // if not, add it (w amount 0)
-      ingredients.push({"name": ingredient.name, "amt":0});
+      ingredients[ingredient.name] = 0;
     }
   });
 });
