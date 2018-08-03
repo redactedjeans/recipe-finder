@@ -1,5 +1,5 @@
 <template>
-<div id='recipes'>
+<div id='recipes' class='col'>
     recipes
 </div>
 </template>
@@ -13,4 +13,5 @@ export default {
 <style lang="stylus">
 #recipes
     background-color lightblue
+    flex 1
 </style>

@@ -1,17 +1,19 @@
 <template>
-<div id='ingredients'>
+<div id='ingredients' class='col'>
     <ul>
-        <li v-for="ing in ingredients">{{ ing }}</li>
+        <li v-for="ingr in ingredients">{{ ingr.name }}</li>
     </ul>
 </div>
 </template>
 
 <script>
+var json = require('../assets/food.json');
+
 export default {
   name: 'ingredients',
   data() {
     return {
-      ingredients: []
+      ingredients: json
     }
   }
 }
@@ -20,5 +22,5 @@ export default {
 <style lang="stylus">
 #ingredients
     background-color lightgreen
-    width 200px
+    flex 0 0 30%
 </style>

@@ -1,22 +1,17 @@
 <template>
 <div id="app">
-    <in-list></in-list>
-    <div id="results">
-        <ingredients></ingredients>
-        <recipes></recipes>
-    </div>
+    <ingredients></ingredients>
+    <recipes></recipes>
 </div>
 </template>
 
 <script>
-import InList from './components/InList.vue'
 import Ingredients from './components/Ingredients.vue'
 import Recipes from './components/Recipes.vue'
 
 export default {
   name: 'app',
   components: {
-    InList,
     Ingredients,
     Recipes,
   }
@@ -34,10 +29,9 @@ export default {
 
 // reset
 body
-  margin 0
- // app
- #results
-     background-color pink
-     div
-         display inline-block
+    margin 0
+// app
+#app
+    background-color pink
+    display flex
 </style>
