@@ -3,11 +3,11 @@
   <input value="search" class='search'> <!-- FIXME/TODO (search/filter/autocomplete?) -->
 
   <ul class='ingr-list'>
-    <li v-for="ingr in ingredients">
-      <button v-on:click="add(ingr, -1)" class='btn btn-min'>-</button
-      <span class='ingr'>{{ ingr.name }}</span>
-      <span class='counter'>{{ ingr.amt }}</span>
-      <button v-on:click="add(ingr)" class='btn btn-pls'>+</button>
+    <li v-for="i in ingredients">
+      <button v-on:click="add(i, -1)" class='btn btn-min'>-</button
+      <span class='ingr'>{{ i.name }}</span>
+      <span class='counter'>{{ i.amt }}</span>
+      <button v-on:click="add(i)" class='btn btn-pls'>+</button>
       <!-- TODO when clicking +/-, push number of ingr up to App.vue -->
     </li>
   </ul>
@@ -15,23 +15,21 @@
 </template>
 
 <script>
-var food = require('../assets/food.json');
-// set the initial amount of every ingredient to zero
-food.map(function(f) { f.amt = 0; });
-console.log(JSON.parse(JSON.stringify(food)));
-
 export default {
   name: 'ingredients',
+  props: [
+    'ingredients'
+  ],
   data() {
     return {
-      ingredients: food
+      ingredients: this.ingredients
     }
   },
   methods: {
-    add: function(ingr, mult=1) {
+    add: function(ingredient, mult=1) {
       // 'add' only if going up or if there's room to go down
-      if (mult>=0 || ingr.amt>0) {
-        ingr.amt += mult;
+      if (mult>=0 || ingredient.amt>0) {
+        ingredient.amt += mult;
       }
     }
   }
