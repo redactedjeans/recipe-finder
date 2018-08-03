@@ -18,15 +18,15 @@ var ingredients = {};
 // for each recipe
 recipes.forEach(function(recipe) {
   // go through each ingredient
-  recipe.ingredients.forEach(function(ingredient) {
+  for (var name in recipe.ingredients) {
     // check that ingredient isn't already in the list
-    if (ingredients[ingredient.name] == undefined) {
+    if (ingredients[name] == undefined) {
       // if not, add it (w amount 0)
-      ingredients[ingredient.name] = 0;
+      ingredients[name] = 0;
     }
-  });
+  }
 });
-// console.log(JSON.parse(JSON.stringify(ingredients)));
+console.log(JSON.parse(JSON.stringify(ingredients)));
 
 export default {
   name: 'app',

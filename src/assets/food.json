@@ -1,11 +1,11 @@
 [
     {
         "name": "Apex Fritter",
-        "ingredients": [
-            {"num": 1, "name": "Egg"},
-            {"num": 1, "name": "Corn"},
-            {"num": 1, "name": "Banana"}
-        ],
+        "ingredients": {
+            "Egg": 1,
+            "Corn": 1,
+            "Banana": 1
+        },
         "station": "Kitchen Counter",
         "category": "Main",
         "hunger": 40,
@@ -19,11 +19,11 @@
     },
     {
         "name": "Automato Stew",
-        "ingredients": [
-            {"num": 1, "name": "Wheat"},
-            {"num": 1, "name": "Currentcorn"},
-            {"num": 1, "name": "Automato"}
-        ],
+        "ingredients": {
+          "Wheat": 1,
+          "Currentcorn": 1,
+          "Automato": 1
+        },
         "station": "Kitchen Counter",
         "category": "Main",
         "hunger": 30,
@@ -36,12 +36,12 @@
     },
     {
         "name": "Bacon Pancakes",
-        "ingredients": [
-            {"num": 1, "name": "Wheat"},
-            {"num": 1, "name": "Milk"},
-            {"num": 1, "name": "Egg"},
-            {"num": 1, "name": "Raw Bacon"}
-        ],
+        "ingredients": {
+          "Wheat": 1,
+          "Milk": 1,
+          "Egg": 1,
+          "Raw Bacon": 1
+        },
         "station": "Kitchen Counter",
         "category": "Main",
         "hunger": 40,
@@ -54,10 +54,10 @@
     },
     {
         "name": "Bolt O's",
-        "ingredients": [
-            {"num": 1, "name": "Boltbulb"},
-            {"num": 1, "name": "Milk"}
-        ],
+        "ingredients": {
+          "Boltbulb": 1,
+          "Milk": 1
+        },
         "station": "Kitchen Counter",
         "category": "Main",
         "hunger": 20,
@@ -70,13 +70,13 @@
     },
     {
         "name": "Cheeseburger",
-        "ingredients": [
-            {"num": 1, "name": "Tomato"},
-            {"num": 1, "name": "Relish"},
-            {"num": 1, "name": "Cheese"},
-            {"num": 1, "name": "Bread"},
-            {"num": 1, "name": "Raw Steak"}
-        ],
+        "ingredients": {
+            "Tomato": 1,
+            "Relish": 1,
+            "Cheese": 1,
+            "Bread": 1,
+            "Raw Steak": 1
+        },
         "station": "Kitchen Counter",
         "category": "Main",
         "hunger": 95,

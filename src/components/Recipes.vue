@@ -18,11 +18,11 @@ export default {
     have_ingredients: function(recipe) {
       var have = true;
       var ingredients = this.ingredients;
-      recipe.ingredients.forEach(function(i) {
-        if (ingredients[i.name] < i.num) {
+      for (name in recipe.ingredients) {
+        if (ingredients[name] < recipe.ingredients[name]) {
           have = false;
         }
-      });
+      }
       return have;
     }
   }
