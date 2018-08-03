@@ -1,0 +1,125 @@
+[
+    {
+        "name": "Egg",
+        "ingredients": [],
+        "station": "",
+        "category": "",
+        "hunger": 10,
+        "bonus": [],
+        "value": 10,
+        "rarity": "Common",
+        "tier": 1
+    },
+    {
+        "name": "Corn",
+        "ingredients": [],
+        "station": "",
+        "category": "",
+        "hunger": 10,
+        "bonus": [],
+        "value": 10,
+        "rarity": "Common",
+        "tier": 1
+    },
+    {
+        "name": "Banana",
+        "ingredients": [],
+        "station": "",
+        "category": "",
+        "hunger": 10,
+        "bonus": [],
+        "value": 10,
+        "rarity": "Common",
+        "tier": 1
+    },
+
+    {
+        "name": "Apex Fritter",
+        "ingredients": [
+            {"num": 1, "name": "Egg"},
+            {"num": 1, "name": "Corn"},
+            {"num": 1, "name": "Banana"}
+        ],
+        "station": "Kitchen Counter",
+        "category": "Main",
+        "hunger": 40,
+        "bonus": [
+            {"name": "Bonus Health", "time": 180},
+            {"name": "Bonus Energy", "time": 180}
+        ],
+        "value": 250,
+        "rarity": "Common",
+        "tier": 3
+    },
+    {
+        "name": "Automato Stew",
+        "ingredients": [
+            {"num": 1, "name": "Wheat"},
+            {"num": 1, "name": "Currentcorn"},
+            {"num": 1, "name": "Automato"}
+        ],
+        "station": "Kitchen Counter",
+        "category": "Main",
+        "hunger": 30,
+        "bonus": [
+            {"name": "Bonus Energy", "time": 270}
+        ],
+        "value": 250,
+        "rarity": "Common",
+        "tier": 3
+    },
+    {
+        "name": "Bacon Pancakes",
+        "ingredients": [
+            {"num": 1, "name": "Wheat"},
+            {"num": 1, "name": "Milk"},
+            {"num": 1, "name": "Egg"},
+            {"num": 1, "name": "Raw Bacon"}
+        ],
+        "station": "Kitchen Counter",
+        "category": "Main",
+        "hunger": 40,
+        "bonus": [
+            {"name": "Bonus Health", "time": 360}
+        ],
+        "value": 150,
+        "rarity": "Common",
+        "tier": 2
+    },
+    {
+        "name": "Bolt O's",
+        "ingredients": [
+            {"num": 1, "name": "Boltbulb"},
+            {"num": 1, "name": "Milk"}
+        ],
+        "station": "Kitchen Counter",
+        "category": "Main",
+        "hunger": 20,
+        "bonus": [
+            {"name": "Bonus Energy", "time": 180}
+        ],
+        "value": 200,
+        "rarity": "Common",
+        "tier": 5
+    },
+    {
+        "name": "Cheeseburger",
+        "ingredients": [
+            {"num": 1, "name": "Tomato"},
+            {"num": 1, "name": "Relish"},
+            {"num": 1, "name": "Cheese"},
+            {"num": 1, "name": "Bread"},
+            {"num": 1, "name": "Raw Steak"}
+        ],
+        "station": "Kitchen Counter",
+        "category": "Main",
+        "hunger": 95,
+        "bonus": [
+            {"name": "Bonus Energy", "time": 428},
+            {"name": "Bonus Health", "time": 428}
+        ],
+        "value": 475,
+        "rarity": "Rare",
+        "tier": 2
+    }
+]
