@@ -17,9 +17,9 @@ export default {
   methods: {
     have_ingredients: function(recipe) {
       var have = true;
-      var ingredients = this.ingredients;
+      // var ingredients = this.ingredients;
       for (name in recipe.ingredients) {
-        if (ingredients[name] < recipe.ingredients[name]) {
+        if (this.ingredients[name] < recipe.ingredients[name]) {
           have = false;
         }
       }
