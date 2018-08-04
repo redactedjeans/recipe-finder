@@ -16,6 +16,8 @@ export default {
   },
   methods: {
     have_ingredients: function(recipe) {
+      // TODO: find recipes that have dependencies (eg, have wheat but not bread => can make wheat->bread->cheeseburger)
+      // TODO: find recipes that are *almost* craftable (one/two ingredients off)
       var have = true;
       // var ingredients = this.ingredients;
       for (name in recipe.ingredients) {

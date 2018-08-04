@@ -26,7 +26,7 @@ recipes.forEach(function(recipe) {
     }
   }
 });
-console.log(JSON.parse(JSON.stringify(ingredients)));
+// console.log(JSON.parse(JSON.stringify(ingredients)));
 
 export default {
   name: 'app',
