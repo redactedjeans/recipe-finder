@@ -87,5 +87,14 @@
         "value": 475,
         "rarity": "Rare",
         "tier": 2
+    },
+
+    {
+      "name": "Relish",
+      "ingredients": {
+        "Tomato": 1,
+        "Sugar": 1,
+        "Corn": 1
+      }
     }
 ]
