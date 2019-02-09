@@ -1,7 +1,7 @@
 <template>
 <div id='recipes' class='col col-r'>
   <ul class='recipe-list'>
-    <li v-for="recipe in recipes" v-if="have_ingredients(recipe)">{{ recipe.name }}</li>
+    <li v-for="recipe in filtered_recipes" :key="recipe.name">{{ recipe.name }}</li>
   </ul>
 </div>
 </template>
@@ -19,6 +19,14 @@ export default {
       r_names: this.recipes.map(r => r.name)
     }
   },
+  computed: {
+    filtered_recipes: function() {
+      return this.recipes.filter((recipe) => {
+        return this.have_ingredients(recipe);
+      });
+    }
+  },
+  //
   methods: {
     // TODO: find recipes that are *almost* craftable (one/two ingredients off)
     // FIXME: if need ingredient twice, once in dependency, only checks once
@@ -27,7 +35,6 @@ export default {
     have_ingredients: function(recipe) {
       var have = true;
       for (name in recipe.ingredients) {
-        console.log('-', name);
         if (!this.r_names.includes(name)) {
           // ingredient is produce or meat: check ingredient list
           have = have && (this.ingredients[name] >= recipe.ingredients[name]);

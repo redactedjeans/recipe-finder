@@ -11,6 +11,7 @@
 import Ingredients from './components/Ingredients.vue'
 import Recipes from './components/Recipes.vue'
 
+// FIXME: shld this be elsewhere?
 // get all recipes
 var recipes = require('./assets/food.json');
 // parse recipe list to create ingredient list

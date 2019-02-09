@@ -4,8 +4,8 @@
   <button v-on:click="reset" class='btn'>Reset</button>
 
   <ul class='ingredient-list'>
-    <li v-for="(amt, name) in ingredients" class='ingredient'>
-      <button v-on:click="add(name, -1)" class='btn btn-min'>-</button
+    <li v-for="(amt, name) in ingredients" :key="name" class='ingredient'>
+      <button v-on:click="add(name, -1)" class='btn btn-min'>-</button>
       <span class='ingredient'>{{ name }}</span>
       <span class='counter'>{{ amt }}</span>
       <button v-on:click="add(name)" class='btn btn-pls'>+</button>
